@@ -1,0 +1,25 @@
+from openai import OpenAI
+client = OpenAI(itai)
+
+response = client.chat.completions.create(
+  model="gpt-3.5-turbo",
+  messages=[
+    {
+      "role": "system",
+      "content": "اريد كود  برمجة اشتراك   في دورة تعليم اساسيات الحاسوب\n"
+    },
+    {
+      "role": "assistant",
+      "content": "GPTALAA YA"
+    },
+    {
+      "role": "assistant",
+      "content": "عذرًا، لا أستطيع إعطاء روابط أو توجيهات للتسجيل في دورات معينة. ومع ذلك، يُمكنك البحث عبر الإنترنت عن منصات تقدم دورات في تعليم أساسيات الحاسوب مثل Coursera، Udemy، edX، Khan Academy، وغيرها. قم بزيارة مواقعهم وابحث عن الدورات التي تناسب احتياجاتك واشترك فيها."
+    }
+  ],
+  temperature=1,
+  max_tokens=256,
+  top_p=1,
+  frequency_penalty=100,
+  presence_penalty=11
+)
